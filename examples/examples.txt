@@ -1,0 +1,27 @@
+>python gross2net.py -h
+usage: gross2net.py [-h] [-c] [-u] [-d] [-r] [-p PPK] GROSS [GROSS ...]
+
+This program calculate up to 12 net from gross in PLN.
+
+positional arguments:
+  GROSS              gross values.
+
+optional arguments:
+  -h, --help         show this help message and exit
+  -c, --chart        show chart of relationship between given gross and net.
+  -u, --under26      calculate net for people under 26 years old.
+  -d, --diff_city    calculate net for working in different city.
+  -r, --raw          Outputs only calculated net values in format: val val val...
+  -p PPK, --ppk PPK  set ppk share (min 2.0 max 4.0).
+
+>python gross2net.py 2000 3000 3500 4000 4500 5000
+GROSS       NET
+2000.00     1497.48
+3000.00     2202.72
+3500.00     2555.34
+4000.00     2907.96
+4500.00     3260.58
+5000.00     3613.19
+
+>python gross2net.py -r 2000 3000 3500 4000 4500 5000
+1497.48 2202.72 2555.34 2907.96 3260.58 3613.19
